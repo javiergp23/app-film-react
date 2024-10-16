@@ -13,7 +13,7 @@ const Peliculas = (props) => {
           <span>{props.calificacion}</span> /10
         </p>
         <p className="describe">
-          {props.children}
+          {props.descripcion}
         </p>
         <p className="run-time">
           {" "}

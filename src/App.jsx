@@ -1,14 +1,14 @@
 import Peliculas from "./componenets/Peliculas.jsx";
 import PageWraper from "./componenets/PageWraper.jsx";
-import PeliculasJson from './pelicula.json'
+import peliculasJson from './pelicula.json'
 
 function App() {
 
-  let peliculas = PeliculasJson;
+  let peliculas = peliculasJson;
   return (
     <>
       <PageWraper>
-        {peliculas.map(()=> {
+        {peliculas.map(pelicula => 
 
           <Peliculas
           titulo={pelicula.titulo}
@@ -21,7 +21,7 @@ function App() {
           descripcion={pelicula.descripcion}
           >
         </Peliculas>
-        })}
+        )}
       </PageWraper>
     </>
   );
