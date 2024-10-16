@@ -1,23 +1,27 @@
 import Peliculas from "./componenets/Peliculas.jsx";
 import PageWraper from "./componenets/PageWraper.jsx";
+import PeliculasJson from './pelicula.json'
 
 function App() {
+
+  let peliculas = PeliculasJson;
   return (
     <>
       <PageWraper>
-        <Peliculas
-          titulo="Oblivion (2012)"
-          calificacion="8.1"
-          director="Joss Whedon"
-          fecha="1 May 2015"
-          duracion="2h21"
-          actores="Robert Downey Jr.,Chris Evans, Chris Hemsworth"
-          img="images/uploads/mv1.jpg"
-        >
-          Earth's mightiest heroes must come together and learn to fight as a
-          team if they are to stop the mischievous Loki and his alien army from
-          enslaving humanity...
+        {peliculas.map(()=> {
+
+          <Peliculas
+          titulo={pelicula.titulo}
+          calificacion={pelicula.calificacion}
+          director={pelicula.director}
+          fecha={pelicula.fecha}
+          duracion={pelicula.duracion}
+          actores={pelicula.actores}
+          img={pelicula.img}
+          descripcion={pelicula.descripcion}
+          >
         </Peliculas>
+        })}
       </PageWraper>
     </>
   );
