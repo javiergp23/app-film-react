@@ -10,16 +10,21 @@ function App() {
 
   let peliculas = peliculasJson;
 
-  const buscarPeliculas = () => {
+  const buscarPeliculas = async () => {
     let url = `https://lucasmoy.dev/data/react/peliculas.json`;
-    fetch(url, {
+
+    let resultado = await fetch(url, {
       "method": "GET",
+      "mode": 'no-cors',
       "headers": {
         "Accept": "application/json",
         "Content-Type": "application/json"
       }
     })
+    let json = resultado.json();
+    alert(json)
   }
+  buscarPeliculas()
 
   const cargarPeliculas = () => {
     peliculas = peliculas.slice((paginaActual - 1) * TOTAL_POR_PAGINA, paginaActual * TOTAL_POR_PAGINA);
