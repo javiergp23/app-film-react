@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import Peliculas from "./componenets/Peliculas.jsx";
 import PageWraper from "./componenets/PageWraper.jsx";
-// import peliculasJson from './pelicula.json'
 import Paginacion from "./componenets/Paginacion.jsx";
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
   useEffect(() => {
     buscarPeliculas()
   },[peliculas])
-  // let peliculas = peliculasJson;
 
   const buscarPeliculas = async () => {
     let url = `https://lucasmoy.dev/data/react/peliculas.json`;
@@ -22,29 +20,13 @@ function App() {
     .then(data => {
       console.log(data)
     })
-      // "method": "GET",
-      // "mode": 'no-cors',
-      // "headers": {
-      //   "Accept": "application/json",
-      //   "Content-Type": "application/json",
-        
-    
-    
-    // let json = resultado.json();
-    // console.log(json)
-
+      
   }
-
-  // const cargarPeliculas = () => {
-  //   peliculas = peliculas.slice((paginaActual - 1) * TOTAL_POR_PAGINA, paginaActual * TOTAL_POR_PAGINA);
-  // };
 
   const getTotalPaginas = () => {
     let canntidadTotalDePeliculas = peliculasJson.length
     Math.ceil(cantidadTotalDePeliculas / TOTAL_POR_PAGINA)
   };
-
-  // cargarPeliculas();
 
   return (
     <>
