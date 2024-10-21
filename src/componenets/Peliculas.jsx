@@ -1,4 +1,5 @@
 const Peliculas = (props) => {
+  //componente de peliculas
   return (
     <div className="movie-item-style-2">
       <img src={props.img} alt="" />

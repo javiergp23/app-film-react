@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 const Paginacion = (props) => {
-    
-
+    //metodo para renderizar paginacion
     const getPAginas = () => {
         const resultado = [];
         for (let i = 0; i < props.total; i++){
